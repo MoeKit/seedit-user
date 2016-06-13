@@ -1,0 +1,33 @@
+{
+  "name": "seedit-user",
+  "version": "0.0.6",
+  "description": "seedit user helper",
+  "homepage": "https://github.com/MoeKit/seedit-user.git",
+  "author": "wangcl",
+  "maintainers": [
+    "wangcl"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MoeKit/seedit-user.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "keywords": [],
+  "licenses": "MIT",
+  "spm": {
+    "main": "index.js",
+    "alias": {},
+    "devAlias": {},
+    "engines": {},
+    "dependencies": {
+      "seedit-api": "0.0.5",
+      "eventor": "0.0.3",
+      "local-store": "1.3.16"
+    },
+    "devDependencies": {
+      "seajs": "2.2.1"
+    }
+  }
+}
