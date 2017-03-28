@@ -82,9 +82,9 @@ User.login = function (username, password, sCallback, fCallback) {
 // 常用配置
 User.config = {
     defaultAvatar: {
-        small: 'http://scdn.bozhong.com/source/resource/img/noavatar_small.gif',
-        middle: 'http://scdn.bozhong.com/source/resource/img/noavatar_middle.gif',
-        big: 'http://scdn.bozhong.com/source/resource/img/noavatar_big.gif'
+        small: '//source.bozhong.com/resource/img/noavatar_small.gif',
+        middle: '//source.bozhong.com/resource/img/noavatar_middle.gif',
+        big: '//source.bozhong.com/resource/img/noavatar_big.gif'
     }
 };
 
@@ -94,7 +94,7 @@ User.buildAvatar = function (uid) {
     var u;
     temp.length < 9 ? u = Array(9 - temp.length + 1).join('0') + temp : u = temp;
     u = u.replace(/(\d{3})(\d{2})(\d{2})(\d{2})/, "$1\/$2\/$3\/$4");
-    var url = "http://uc.seedit.com/data/avatar/" + u + "_avatar_";
+    var url = "//uc.bozhong.com/data/avatar/" + u + "_avatar_";
     return {
         small: url + 'small.jpg',
         middle: url + 'middle.jpg',
