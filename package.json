@@ -1,6 +1,6 @@
 {
   "name": "seedit-user",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "seedit user helper",
   "homepage": "https://github.com/MoeKit/seedit-user.git",
   "author": "wangcl",
@@ -22,7 +22,7 @@
     "devAlias": {},
     "engines": {},
     "dependencies": {
-      "seedit-api": "0.0.5",
+      "seedit-api": "0.0.6",
       "eventor": "0.0.3",
       "local-store": "1.3.16"
     },

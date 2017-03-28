@@ -13,3 +13,6 @@
 
 `tag:new` moe/seedit.user 初次提交
 
+## 0.0.7
+
+`fixed` 修改seedit-api版本，兼容https
