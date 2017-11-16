@@ -1,6 +1,7 @@
 var User = {
     userinfo: {}
 };
+window.bzUserInfo = window.bzUserInfo || {};
 var API = require('seedit-api');
 // 本地存储
 var store = require('local-store');
@@ -36,12 +37,12 @@ User.on('get_user_info_success', function (data) {
 // 获取用户信息
 User.getUserInfo = function (sCallback, fCallback) {
     // 缓存用户信息，其他脚本引用时不会再发送请求
-    if(User.userinfo && User.userinfo.username){
-        sCallback(User.userinfo);
+    if(window.bzUserInfo && window.bzUserInfo.username){
+        sCallback(window.bzUserInfo);
     }else{
          API.get('bbs/common_member', function (data) {
             User.trigger('get_user_info_success', data); // 触发事件:成功获取用户信息
-            User.userinfo = data;
+            window.bzUserInfo = data;
             sCallback(data);
         }, function (error) {
             fCallback && fCallback(error);
