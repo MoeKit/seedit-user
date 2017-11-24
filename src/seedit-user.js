@@ -41,6 +41,9 @@ User.getUserInfo = function (sCallback, fCallback) {
         sCallback(window.bzUserInfo);
     }else{
          API.get('bbs/common_member', function (data) {
+            if (data && data.avatar) {
+                data.avatar = data.avatar.replace('http:', '');
+            }
             User.trigger('get_user_info_success', data); // 触发事件:成功获取用户信息
             window.bzUserInfo = data;
             sCallback(data);
